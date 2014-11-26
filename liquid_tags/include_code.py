@@ -89,6 +89,7 @@ def include_code(preprocessor, tag, markup):
     code_closetag = preprocessor.configs.getConfig('CODE_CLOSETAG')
     code_download = preprocessor.configs.getConfig('CODE_DOWNLOADSTRING')
     code_path = os.path.join('content', code_dir, src)
+    siteurl = preprocessor.configs.getConfig('SITEURL')
 
     if not os.path.exists(code_path):
         raise ValueError("File {0} could not be found".format(code_path))
@@ -114,7 +115,7 @@ def include_code(preprocessor, tag, markup):
         title += " [Lines %s]" % lines
     title = title.strip()
 
-    url = '{0}/{1}/{2}'.format(settings.get('SITEURL'),code_dir, src)
+    url = '{0}/{1}/{2}'.format(siteurl,code_dir, src)
 
     open_tag = code_opentag.format(title=title,url=url,classes=classes,download=code_download)
     close_tag = code_closetag.format(title=title,url=url,classes=classes,download=code_download)
