@@ -114,8 +114,7 @@ def include_code(preprocessor, tag, markup):
         title += " [Lines %s]" % lines
     title = title.strip()
 
-    url = '{0}/{1}'.format(code_dir, src)
-    url = re.sub('/+', '/', url)
+    url = '{0}/{1}/{2}'.format(settings.get('SITEURL'),code_dir, src)
 
     open_tag = code_opentag.format(title=title,url=url,classes=classes,download=code_download)
     close_tag = code_closetag.format(title=title,url=url,classes=classes,download=code_download)
