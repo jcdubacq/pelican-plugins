@@ -31,6 +31,7 @@ LT_HELP = { 'CODE_DIR' : 'Code directory for include_code subplugin',
             'CODE_OPENTAG' : 'Opening template for include_code subplugin',
             'CODE_CLOSETAG' : 'Closing template for include_code subplugin',
             'CODE_DOWNLOADSTRING' : 'The `download` helper string for include_code subplugin',
+            'SITEURL' : 'Site URL',
             'NOTEBOOK_DIR' : 'Notebook directory for notebook subplugin'
 }
 
