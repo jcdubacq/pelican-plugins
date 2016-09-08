@@ -118,7 +118,6 @@ def include_code(preprocessor, tag, markup):
     title = title.strip()
 
     url = '{0}/{1}'.format(override, src)
-    print '<'+url+'>'
     url = re.sub('/+', '/', url)
 
     open_tag = code_opentag.format(title=title,url=url,classes=classes,download=code_download)
