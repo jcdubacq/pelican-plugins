@@ -123,7 +123,7 @@ To include code from a file in your document with a link to the original
 file, enable the `liquid_tags.include_code` plugin, and add the following to
 your source document:
 
-    {% include_code /path/to/code.py [lang:python] [lines:X-Y] [classes:fancy,pinkish] [:hidefilename:] [title] %}
+    {% include_code /path/to/code.py [lang:python] [charset:utf-8] [lines:X-Y] [classes:fancy,pinkish] [:hidefilename:] [title] %}
 
 All arguments are optional but must be specified in the order shown above.
 If using `:hidefilename:`, a title must be provided as indicated above.
@@ -143,6 +143,10 @@ Additionally, in order for the resulting hyperlink to work, this directory must
 be listed in the STATIC_PATHS setting. For example:
 
     STATIC_PATHS = ['images', 'code']
+
+Moreover, the default charset for reading source files is `ascii`. If you want to use another charset by default, use
+
+    CODE_CHARSET = 'utf-8'
 
 Theming the inclusion snippet is possible through the following lines
 
